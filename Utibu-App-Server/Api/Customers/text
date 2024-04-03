@@ -1,0 +1,26 @@
+ new sql.Request().query(
+              `insert into Customers (Customer_ID, First_Name, Last_Name, Email, Phone, Password) values ('${customerID}', '${firstName}', '${lastName}', '${email}', '${phoneNumber}', '${encryptedPassword}')`,
+              (err, results) => {
+                if (err) {
+                  console.log(err);
+                  res.status(500).send("Internal Server Error");
+                } else {
+                  console.log(results);
+                  res.status(200).send("Customer added");
+                }
+              }
+            );
+
+            new sql.Request().query(
+              `update Customers set Password = '${hashedPassword}' where Email = '${email}'`,
+              (err, result) => {
+                if (err) {
+                  console.log(err);
+                }
+                if (result.recordsets) {
+                  console.log(result);
+                  res.status(200).send("Password updated successfully");
+                }
+              }
+            );
+
