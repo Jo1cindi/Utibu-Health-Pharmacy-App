@@ -1,7 +1,7 @@
 Utibu Health Pharmacy App <br/>
 The App is a mobile android app <br/>
-Server Folder: Utibu-App-Server
-Client/Mobile App Folder: Utibu-Health-master
+Server Folder: Utibu-App-Server<bt/>
+Client/Mobile App Folder: UtibuHealth-master
 
 The Technologies used: <br/>
 For the client/Inrerfaces: React Native <br/>
